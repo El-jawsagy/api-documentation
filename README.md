@@ -39,6 +39,8 @@ Every endpoint like (/Tickets) should has this methods
 - `401 Unauthorized`: Token Expired 
 - `403 forbidden`: Token Expired / User Unverified
 - `404 Not Found`: Resource not found
+- `422 Validation Error`: The server can't process your request, although it understands itResource not found
+- `429 Too Many Requests`: User Send Many requests to server
 - `500 Internal Server Error`: Server encountered an error
 
 
