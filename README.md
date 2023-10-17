@@ -62,7 +62,7 @@ This section provides examples of how will be GET request shape to the API, alon
   GET /endpoint/${Id}
 
   ```
-
+<a name="GET-Parameter"></a>
 **Parameter Name**:
 - Example: `status` (String) 
 ```http
@@ -102,7 +102,8 @@ This section provides examples of how will be POST request shape to the API, alo
 
 **Create Resource** 
   ```http
-   POST /endpoint
+
+  POST /endpoint
   
   ```
 and body will contain data of resource 
@@ -150,7 +151,8 @@ _Note_: This Api must be used with a token or authorized user.
 
 **Create Resource** 
   ```http
-   DELETE /endpoint/${Id}
+
+  DELETE /endpoint/${Id}
   
   ```
 
@@ -176,9 +178,19 @@ To support multiple languages, you can include the `Accept-Language` header in y
 
 
 **Request with Preferred Language:**
-
+ To use it add key and value in header
 ```json
 {
   "Accept-Language": "ar"
 }
 ```
+
+
+## Pagination
+
+For endpoints that return a large set of results, you can paginate through the data using the `page` and `limit` parameters.
+
+- `page`: The page number you want to retrieve (1-based index).
+- `limit`: The number of items to return per page.
+
+you can use it with [GET](#GET) request as [Parameter](#GET-Parameter) 
